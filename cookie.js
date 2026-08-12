@@ -47,3 +47,10 @@ function renderCookiesTable() {
 }
 
 renderCookiesTable();
+
+// function removeCookie(name, value) {
+//   const cookieString = `${name}=${value}; expires = Thu, 01 Jan 1970 00:00:00 UTC;`;
+//   document.cookie = cookieString;
+// }
+
+// btnDeleteCookie.addEventListener("click");
