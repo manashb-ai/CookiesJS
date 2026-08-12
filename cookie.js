@@ -1,3 +1,4 @@
+const tableHead = document.querySelector("thead");
 const tableBody = document.querySelector("tbody");
 const form = document.querySelector("form");
 const keyInput = document.querySelector("#key");
@@ -28,12 +29,19 @@ function renderCookiesTable() {
     const tr = document.createElement("tr");
     const tdKey = document.createElement("td");
     const tdValue = document.createElement("td");
+    // adding delete button functionality
+    const tdButton = document.createElement("td");
+    const btnDeleteCookie = document.createElement("button");
+    btnDeleteCookie.classList.add("delete-cookie");
+    btnDeleteCookie.textContent = "❌";
 
     tdKey.textContent = key;
     tdValue.textContent = value;
+    tdButton.append(btnDeleteCookie); //adding the button to the table data (td)
 
     tr.appendChild(tdKey);
     tr.appendChild(tdValue);
+    tr.appendChild(tdButton);
     tableBody.appendChild(tr);
   });
 }
