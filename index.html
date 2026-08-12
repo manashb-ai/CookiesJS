@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Pookies</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="./cookie.js"></script>
+  </head>
+  <body>
+    <div>
+      <form id="cookie-form">
+        <input type="text" id="key" placeholder="Key" />
+        <input type="text" id="value" placeholder="Value" />
+        <button id="set-cookie">Set Cookie</button>
+      </form>
+    </div>
+    <h2>Cookies:</h2>
+    <span id="all-cookies"></span>
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody id="cookies-table-body">
+        <td>exampleKey</td>
+        <td>exampleValue</td>
+      </tbody>
+    </table>
+  </body>
+</html>
