@@ -35,6 +35,10 @@ function renderCookiesTable() {
     btnDeleteCookie.classList.add("delete-cookie");
     btnDeleteCookie.textContent = "❌";
 
+    btnDeleteCookie.addEventListener("click", (event) => {
+      removeCookie(key);
+    });
+
     tdKey.textContent = key;
     tdValue.textContent = value;
     tdButton.append(btnDeleteCookie); //adding the button to the table data (td)
@@ -48,9 +52,8 @@ function renderCookiesTable() {
 
 renderCookiesTable();
 
-// function removeCookie(name, value) {
-//   const cookieString = `${name}=${value}; expires = Thu, 01 Jan 1970 00:00:00 UTC;`;
-//   document.cookie = cookieString;
-// }
-
-// btnDeleteCookie.addEventListener("click");
+function removeCookie(name) {
+  const cookieString = `${name}=; expires = Thu, 01 Jan 1970 00:00:00 UTC;`;
+  document.cookie = cookieString;
+  renderCookiesTable();
+}
